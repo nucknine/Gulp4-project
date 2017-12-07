@@ -1,5 +1,5 @@
 {
-  "name": "loftschool-builder",
+  "name": "Gulp4-project",
   "devDependencies": {
     "browser-sync": "~2.18.7",
     "del": "~3.0.0",
@@ -17,7 +17,8 @@
     "gulp-sass": "~3.1.0",
     "gulp-sourcemaps": "~2.6.0",
     "gulp-svg-sprite": "~1.3.1",
-    "gulp-svgmin": "~1.2.2"
+    "gulp-svgmin": "~1.2.2",
+    "gulp-plumber": "^1.1.0"
   },
   "dependencies": {
     "normalize.css": "~7.0.0",

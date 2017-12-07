@@ -35,3 +35,14 @@ $.gulp.task('default', $.gulp.series(
     'serve'
   )
 ));
+
+/*
+ "bemto.pug": "^2.1.0",
+ "gulp-cache": "^0.4.2",
+ "gulp-imagemin": "^2.4.0",
+
+ "gulp-rename": "^1.2.2",
+
+ "gulp-uglifyjs": "^0.6.2",
+
+ */
