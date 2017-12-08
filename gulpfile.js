@@ -1,8 +1,10 @@
 'use strict';
 
+//глобальный объект доступ к нему есть во всех файлах модулях
 global.$ = {
   package: require('./package.json'),
   config: require('./gulp/config'),
+  //пути
   path: {
     task: require('./gulp/paths/tasks.js'),
     jsFoundation: require('./gulp/paths/js.foundation.js'),
@@ -15,12 +17,15 @@ global.$ = {
   gp: require('gulp-load-plugins')()
 };
 
+//подключение всех тасков в файл
 $.path.task.forEach(function(taskPath) {
   require(taskPath)();
 });
 
+//порядок выполнения задач
 $.gulp.task('default', $.gulp.series(
   'clean',
+  //2ая задача внутри несколько параллельных
   $.gulp.parallel(
     'sass',
     'pug',
@@ -30,19 +35,9 @@ $.gulp.task('default', $.gulp.series(
     'css:foundation',
     'sprite:svg'
   ),
+  //3ая задача внутри несколько параллельных
   $.gulp.parallel(
     'watch',
     'serve'
   )
 ));
-
-/*
- "bemto.pug": "^2.1.0",
- "gulp-cache": "^0.4.2",
- "gulp-imagemin": "^2.4.0",
-
- "gulp-rename": "^1.2.2",
-
- "gulp-uglifyjs": "^0.6.2",
-
- */
