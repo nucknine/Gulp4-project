@@ -14,7 +14,9 @@ global.$ = {
   gulp: require('gulp'),
   del: require('del'),
   browserSync: require('browser-sync').create(),
-  gp: require('gulp-load-plugins')()
+  gp: require('gulp-load-plugins')(),
+  //webpackmain : require('webpack'),
+  //webpackConfig : require('./webpack.config.js')
 };
 
 //подключение всех тасков в файл

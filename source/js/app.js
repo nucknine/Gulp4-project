@@ -20,7 +20,7 @@
 
     var obj = new baseModel();
 
-  console.log("es6" + obj + " " + name);
+  console.log("es6" + obj.getName() + " " + name);
 
   setTimeout(function() {
     document.querySelector('.greating_picture').classList.add('m--show');
