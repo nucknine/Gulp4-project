@@ -35,7 +35,8 @@ $.gulp.task('default', $.gulp.series(
     'js:process',
     'copy:image',
     'css:foundation',
-    'sprite:svg'
+    'sprite:svg',
+    'copy:fonts'
   ),
   //3ая задача внутри несколько параллельных
   $.gulp.parallel(

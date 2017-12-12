@@ -6,6 +6,8 @@ module.exports = function() {
       .pipe($.gp.sourcemaps.init())
       .pipe($.gp.concat('app.js'))
       .pipe($.gp.sourcemaps.write())
+      .pipe($.gp.eslint())
+      .pipe($.gp.eslint.format())
       //.pipe($.gp.webpack($.gulp.webpackConfig, $.gulp.webpack))
       .pipe($.gulp.dest($.config.root + '/assets/js'))
   })
