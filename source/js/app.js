@@ -1,27 +1,27 @@
 (function() {
-  'use strict';
-/*
-    var first = 'Oleg';
-    var name = 'Your name is' + first;
+'use strict';
 
-    class baseModel {
-        constructor(options = {}, data = []) { // class constructor
-            this.name = 'Base';
-            this.url = 'http://azat.co/api';
-            this.data = data;
-            this.options = options
-        }
+var first = 'Oleg'
+var name = `Your name is ${first}.`
 
-        getName() { // class method
-            console.log('Class name:' + this.name)
-        }
-    }
+class baseModel {
+constructor(options = {}, data = []) { // class constructor
+this.name = 'Base'
+this.url = 'http://azat.co/api'
+this.data = data
+this.options = options
+}
 
-    var obj = new baseModel();
+getName() { // class method
+console.log(`Class name: ${this.name}`)
+}
+}
 
-  console.log("es6" + obj.getName() + " " + name);
-*/
-  setTimeout(function() {
-    document.querySelector('.greating_picture').classList.add('m--show');
-  }, 1000);
+var obj = new baseModel();
+
+console.log('es6' + obj.getName() + ' ' + name);
+
+setTimeout(function() {
+document.querySelector('.greating_picture').classList.add('m--show');
+}, 1000);
 })();
