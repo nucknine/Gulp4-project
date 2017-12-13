@@ -27,6 +27,7 @@ $.path.task.forEach(function(taskPath) {
 //порядок выполнения задач
 $.gulp.task('default', $.gulp.series(
   'clean',
+  'sprite:svg',
   //2ая задача внутри несколько параллельных
   $.gulp.parallel(
     'sass',
@@ -35,7 +36,6 @@ $.gulp.task('default', $.gulp.series(
     'js:process',
     'copy:image',
     'css:foundation',
-    'sprite:svg',
     'copy:fonts'
   ),
   //3ая задача внутри несколько параллельных

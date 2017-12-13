@@ -1,6 +1,8 @@
 (function() {
 'use strict';
 
+svg4everybody();
+
 var first = 'Oleg'
 var name = `Your name is ${first}.`
 
