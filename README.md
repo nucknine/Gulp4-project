@@ -6,9 +6,9 @@
 
 1. ```clone this repo```
 2. ```cd path/to/...```
-3. ```npm install gulpjs/gulp-cli -g```  
+3. ```yarn add global gulp-cli```  
 > Установка последней версии Gulp CLI tools
 
-4. ```npm install```
+4. ```yarn```
 6. ```run gulp``` 
 
