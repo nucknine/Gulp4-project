@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&subset=cyrillic');
+
+@font-face {
+  font-family: 'bernier';
+  src: url('../../fonts/BERNIERRegular-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin bernier() {
+  font-family: 'bernier';
+}
