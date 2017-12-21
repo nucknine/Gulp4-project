@@ -1,0 +1,5 @@
+.title {
+  color: $color-main-font;
+  @include bernier();
+  @include font-size(3);
+}

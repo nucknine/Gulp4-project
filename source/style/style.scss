@@ -20,13 +20,18 @@
   ## Captions
   ## Galleries
 --------------------------------------------------------------*/
-@import "variables-site/variables-site";
-@import 'common/svgsprite.scss';
+
+/*--------------------------------------------------------------
+# Global imports
+--------------------------------------------------------------*/
+@import 'mixins/mixins-master';
+@import 'variables-site/variables-site';
+@import 'common/svgsprite';
 
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-@import 'typography/typography.scss';
+@import 'typography/typography';
 
 /*--------------------------------------------------------------
 # Content

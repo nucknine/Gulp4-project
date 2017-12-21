@@ -1,4 +1,33 @@
 /*
+clearfix миксин плейсхолдер
+*/
+%clearfix {
+  &:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+/*
+center element
+*/
+@mixin centered($axis: 'both') {
+  position: absolute;
+  @if $axis == 'both' {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if $axis == 'x' {
+    left: 50%;
+    transform: translateX(-50%);
+  } @else if $axis == 'y' {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/*
 Fill element
 */
 @mixin fill($color:red) {
@@ -30,21 +59,43 @@ shadow
 }
 
 /*
+adaptive media
+*/
+
+@mixin adaptive($point) {
+  @if $point == smart {
+    @media only screen and (max-width: 480px) { @content; }
+  }
+  @else if $point == tablet {
+    @media only screen and (min-width: 481px) and (max-width: 1024px) { @content; }
+  }
+  @else if $point == pc {
+    @media only screen and (min-width: 1025px)  { @content; }
+  }
+}
+
+/*
+font-size
+*/
+@mixin font-size($sizeValue: 1) {
+  font-size: ($sizeValue * 20) * 1px;
+  font-size: $sizeValue * 1.25rem;
+}
+
+/*
+bernier font
+*/
+
+@mixin bernier() {
+  font-family: 'bernier';
+}
+
+/*
 cols(n=3, m=10)
 margin-right m px
 width ((100% - (((@margin-right * n) / wrapper-width) * 100%)) / n)
 &:last-child
 margin-right 0px
-
-
-//adaptive media
-adaptive(media)
-if media == smart
-@media only screen and (max-width: 480px) {block}
-else if media == tablet
-@media only screen and (min-width: 481px) and (max-width: 1024px) {block}
-else if media == pc
-@media only screen and (min-width: 1025px) {block}
 
 // Fonts mixin
 font-url(file)
@@ -65,3 +116,4 @@ if hack-chrome-windows
 @font-face
 font-family family
 src url(font-url(file + '.svg#'+ family)) format('svg')
+*/

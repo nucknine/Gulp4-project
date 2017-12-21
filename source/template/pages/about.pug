@@ -17,22 +17,37 @@ block variables
 
 block content
   +b.SECTION.section.hero__
+    +e.bg
+      +e.IMG(src="assets/img/portfolio.jpg" alt="").img-bg
+
     +b.UL.socials
       each item in ['vk', 'gh', 'in']
         +e.LI.item
           a(href="#" class=`socials__link socials__link_${item}`)
     +b.A(href="#").hamburger
     +b.A(href="#").down-arrow
+      +e.IMG(src="assets/img/icons/arrow_down.svg")
+      //+icon('arrow_down')
+
     +e.title
-      +b.IMG(src="#").section-title
+      +b.IMG(src="assets/img/decor/porfolio-word.png" alt="").section-title
       //-миксин hero__user-block на блоке user (примесь добавляет особенности блоку в зависимости от местонахождения: section hero в данном случае)
       +b.user.hero__user-block
         +e.photo
+          +e.photo-avatar
+            +e.IMG(src="assets/img/user.png" alt="").photo-img
         +e.name
+          | Oleg Maximov
         +e.description
+          | Личный сайт разработчика
+
   +b.SECTION.section.about__
     +e.left
-      +b.SVG.triangle._fill_white
+      +b.SVG(
+      viewbox="0 0 1000 100"
+      preserveAspectRatio="none"
+      ).triangle._fill_white.about__triangles
+        polygon(points="0,0 0,100 1000,100")
       //-миксин about__section-title
       +b.title.about__section-title
         | Обо мне
@@ -42,9 +57,14 @@ block content
         +e.title.subtitle
           | Кто я
         +e.text
-          p Я разработчик из Петрозаводска
+          p Я разработчик
           p Я разработчик
     +e.right
+      +b.SVG(
+      viewbox="0 0 1000 100"
+      preserveAspectRatio="none"
+      ).triangle._fill_beige.about__triangles
+        polygon(points="0,100 1000,0 1000,100")
       +b.about-data.about-user-info__
         +e.description
           +e.title

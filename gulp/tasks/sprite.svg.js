@@ -3,7 +3,7 @@
 module.exports = function() {
   $.gulp.task('sprite:svg', function() {
     //путь до источника всех иконок svg
-    return $.gulp.src('./source/sprite/*.svg')
+    return $.gulp.src('./source/images/icons/*.svg')
       .pipe($.gp.svgmin({
         js2svg: {
           pretty: true
@@ -23,13 +23,13 @@ module.exports = function() {
       .pipe($.gp.svgSprite({
         mode: {
           symbol: {
-            sprite: "../sprite.svg",
+            sprite: "../../sprites/sprite.svg",
             render: {
                 scss: {
                   //куда нужно генерировать стили для спрайта
                   // Этот файл подключается в главный scss файл.
                   // Путь задается относительно файла sprite.svg, который был создан выше (в директории build)
-                  dest:'../../../../source/style/common/_svgsprite.scss',
+                  dest:'../../../../../source/style/common/_svgsprite.scss',
                   //код шаблона, на основе которого будут генерироваться стили для спрайта.
                   // Путь задается относительно корня
                   template: "./source/style/common/_sprite_template.scss"
@@ -39,6 +39,6 @@ module.exports = function() {
         }
       }))
       //переносим спрайт в директорию build
-      .pipe($.gulp.dest($.config.root + '/assets/img'))
+      .pipe($.gulp.dest($.config.root + '/assets/img/icons'))
   })
 };
