@@ -75,22 +75,6 @@ adaptive media
 }
 
 /*
-font-size
-*/
-@mixin font-size($sizeValue: 1) {
-  font-size: ($sizeValue * 20) * 1px;
-  font-size: $sizeValue * 1.25rem;
-}
-
-/*
-bernier font
-*/
-
-@mixin bernier() {
-  font-family: 'bernier';
-}
-
-/*
 cols(n=3, m=10)
 margin-right m px
 width ((100% - (((@margin-right * n) / wrapper-width) * 100%)) / n)
