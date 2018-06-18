@@ -1,29 +1,19 @@
-(function() {
-'use strict';
+/* globals Handlebars */
 
-svg4everybody();
+import Module from './file.js';
 
-var first = 'Oleg'
-var name = `Your name is ${first}.`
+console.log(Module.hello());
 
-class baseModel {
-constructor(options = {}, data = []) { // class constructor
-this.name = 'Base'
-this.url = 'http://azat.co/api'
-this.data = data
-this.options = options
+const arr = ['a', 34, 'd'];
+
+arr.includes('d') ? console.log('ES6 includes work') : 0;
+
+async function foo() {
+    await bar();
 }
 
-getName() { // class method
-console.log(`Class name: ${this.name}`)
+function bar() {
+    console.log('ES6 async functions work!');
 }
-}
 
-var obj = new baseModel();
-
-console.log('es6' + obj.getName() + ' ' + name);
-
-setTimeout(function() {
-document.querySelector('.greating_picture').classList.add('m--show');
-}, 1000);
-})();
+foo();
