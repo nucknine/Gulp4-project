@@ -1,6 +1,12 @@
+@include add-grid(12);
+@include add-gutter(1/3);
+@include add-gutter-style('split');
+
 html {
-  height: 100%;
   background: $background;
+  height: 100%;
+  @include sgs-change('debug', true);
+  @include background-grid($color: blue);
 }
 
 body {

@@ -16,6 +16,7 @@
     "gulp-cheerio": "^0.6.3",
     "gulp-concat": "^2.6.1",
     "gulp-concat-css": "^3.1.0",
+    "gulp-css-unit": "^1.2.2",
     "gulp-csso": "^3.0.1",
     "gulp-eslint": "^4.0.2",
     "gulp-imagemin": "^4.1.0",
@@ -38,6 +39,7 @@
     "jquery": "^3.3.1",
     "normalize.css": "^8.0.0",
     "npm": "^6.1.0",
-    "svg4everybody": "^2.1.9"
+    "svg4everybody": "^2.1.9",
+    "singularitygs": "^1.8.0"
   }
 }

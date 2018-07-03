@@ -1,5 +1,7 @@
 /*
-clearfix миксин плейсхолдер
+clearfix миксин-плейсхолдер
+(scss-placeholder'ы используются вместо миксинов
+когда нет параметров (занимают меньше места чем миксины в коде))
 */
 %clearfix {
   &:after{
@@ -67,10 +69,13 @@ adaptive media
     @media only screen and (max-width: 480px) { @content; }
   }
   @else if $point == tablet {
-    @media only screen and (min-width: 481px) and (max-width: 1024px) { @content; }
+    @media only screen and (max-width: 768px) { @content; }
+  }
+  @else if $point == laptop {
+    @media only screen and (max-width: 992px) { @content; }
   }
   @else if $point == pc {
-    @media only screen and (min-width: 1025px)  { @content; }
+    @media only screen and (max-width: 1200px)  { @content; }
   }
 }
 
