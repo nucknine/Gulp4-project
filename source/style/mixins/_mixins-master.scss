@@ -5,8 +5,10 @@ clearfix миксин-плейсхолдер
 */
 %clearfix {
   &:after{
-    content: "";
+    content: ".";
+    visibility: hidden;
     display: block;
+    height: 0;
     clear: both;
   }
 }
@@ -71,6 +73,9 @@ adaptive media
   @else if $point == tablet {
     @media only screen and (max-width: 768px) { @content; }
   }
+  @else if $point == tablet-landscape {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) { @content; }
+  }
   @else if $point == laptop {
     @media only screen and (max-width: 992px) { @content; }
   }
@@ -78,6 +83,7 @@ adaptive media
     @media only screen and (max-width: 1200px)  { @content; }
   }
 }
+
 
 /*
 cols(n=3, m=10)

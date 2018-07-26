@@ -1,0 +1,40 @@
+.animate {
+    opacity: 0;
+    position: relative;
+}
+
+.toRight {
+    animation: toRight .6s;
+    animation-fill-mode: forwards;
+}
+
+.fadeIn {
+    animation: fadeIn .6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes toRight {
+    from {
+        opacity: 0;
+        left: -200px;
+    }
+
+    to {
+        opacity: 1;
+        left: initial;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
