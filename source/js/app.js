@@ -1,19 +1,21 @@
-/* globals Handlebars */
+/* globals svg4everybody*/
+import { initMap } from './google-map.js';
+import { mouseParallax, scrollParallax } from './parallax.js';
+import { waypoint } from './waypoint-animation.js';
 
-import Module from './file.js';
+window.onload = () => {
 
-console.log(Module.hello());
+    const arr = ['a', 34, 'd'];
 
-const arr = ['a', 34, 'd'];
+    arr.includes('d') ? console.log('ES6 includes work') : 0;
 
-arr.includes('d') ? console.log('ES6 includes work') : 0;
+    async function foo() {
+        await bar();
+    }
 
-async function foo() {
-    await bar();
+    function bar() {
+        console.log('ES6 async functions work!');
+    }
+
+    foo();
 }
-
-function bar() {
-    console.log('ES6 async functions work!');
-}
-
-foo();
